@@ -21,3 +21,9 @@ def cross_product v1, v2
 	end
 	out 
 end
+
+#jubrad
+a = [7,8,9,10]
+(0..a.length-1).each do |index|
+	a[index] += 3
+end
