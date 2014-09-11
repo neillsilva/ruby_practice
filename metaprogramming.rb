@@ -8,10 +8,7 @@ end
 
 class DogFactory < Dog
 	def self.create_class(class_name)	
-		Class.new(Dog)
+		klass ||= Object.const_set(class_name, Class.new(Dog))
 	end
 
-	def method_missing
-		super
-	end
 end
