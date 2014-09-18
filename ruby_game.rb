@@ -1,7 +1,8 @@
 
-class Config
+class Start
 	def setup
 		grid = []
+		alphabet = *('A'..'Z')
 		i = 0
 
 		puts "How many rows would you like?"
@@ -9,10 +10,10 @@ class Config
 		puts "How many columns would you like?"
 		columns = gets.chomp
 
-		rows.times do
+		rows.to_i.times do
 			row_array = []
-			(1..columns).each do |column|
-				row_array << "#{alphabet[i]}#{[column}"
+			(1..columns.to_i).each do |column|
+				row_array << "#{alphabet[i]}#{[column]}"
 			end
 			grid << row_array
 			i += 1
